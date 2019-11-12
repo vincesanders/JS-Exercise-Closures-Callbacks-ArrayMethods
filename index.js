@@ -160,9 +160,15 @@ function processContains(item, list, callback) {
 */
 function processDuplicateFree(list, callback) {
   return callback(list.filter(function(item, index) {
-    return list.indexOf(item) === index;
+    return list.indexOf(item) === index;//indexOf returns the FIRST index of a value in a list.
   }));
 }
+
+/*
+ * The above tests if the index of a value is the first index at which that value occurs. 
+ * If it is, it passes the value to the new array. 
+ * If not, it is a duplicate and will not be passed to the new array. 
+ */
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
