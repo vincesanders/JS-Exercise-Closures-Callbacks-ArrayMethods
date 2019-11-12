@@ -259,9 +259,9 @@ function tallyUpDonations(runners) {
 */
 function counterMaker() {
   // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-    ++count
+  let count = 0; //const is NOT mutable
+  return function counter() { //needs to return the function
+    return count++; //needs to return the new count value. ++ needs to be after count.
   }
   // BROKEN CODE ENDS
 }
